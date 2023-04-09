@@ -3,5 +3,35 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
-</web-app>
+  <display-name>PhoneBook on Servlets</display-name>
+
+  <servlet>
+    <servlet-name>getAllContactsServlet</servlet-name>
+    <servlet-class>ru.academits.khudyakov.servlet.GetAllContactsServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>removeContactServlet</servlet-name>
+    <servlet-class>ru.academits.khudyakov.servlet.RemoveContactServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>AddContactsServlet</servlet-name>
+    <servlet-class>ru.academits.khudyakov.servlet.AddContactServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>getAllContactsServlet</servlet-name>
+    <url-pattern>/phonebook/get/all</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>removeContactServlet</servlet-name>
+    <url-pattern>/phonebook/remove</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>AddContactsServlet</servlet-name>
+    <url-pattern>/phonebook/add</url-pattern>
+  </servlet-mapping>
+  </web-app>
